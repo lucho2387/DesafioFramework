@@ -35,7 +35,7 @@ export class ProductsController {
         if (!productDeleted) throw new NotFoundException('El producto no se pudo encontrar!');
         return res.status(HttpStatus.OK).json({
             message: 'El Producto fue eliminado correctamente',
-            productDeleted
+//             productDeleted
         });
     }
 
@@ -46,7 +46,7 @@ export class ProductsController {
         if (!updatedProduct) throw new NotFoundException('El producto no se pudo encontrar!');
         return res.status(HttpStatus.OK).json({
             message: 'El Producto fue actualizado correctamente',
-            updatedProduct 
+//             updatedProduct 
         });
     }
     
