@@ -3,11 +3,12 @@ import { MongooseModule} from '@nestjs/mongoose'
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProductModule } from './product/product.module';
+import 'dotenv/config';
 
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://luis:coderhouse@cluster0.9xnml.mongodb.net/ecommerce?retryWrites=true&w=majority'
+      process.env.URL,
     ),
     ProductModule
   ],
